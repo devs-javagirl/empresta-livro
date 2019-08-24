@@ -36,4 +36,12 @@ public class Livro {
 			this.autor = autor;
 		}
 
+		public void imprimeLivro(){
+			String mostra = "Livro{" +
+					"codigo=" + codigo +
+					", nome='" + nome + '\'' +
+					", autor='" + autor + '\'' +
+					'}';
+			System.out.println(mostra);
+		}
 }
