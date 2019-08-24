@@ -1,5 +1,7 @@
 package com.djg.emprestalivro;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 import com.djg.emprestalivro.dominio.Emprestimo;
@@ -40,7 +42,7 @@ public class TestaUsuario {
 		livro.imprimeLivro();
 
 
-// ----------------------------------------------   Para testar o emprestimo
+// ----------------------------------------------   Para testar o emprestimo sem a regra de negócio implementada
 
 		System.out.println("\n\n\nDigite a data do empréstimo: ");
 		String dataEmprestimo = scanner.nextLine();
@@ -50,6 +52,33 @@ public class TestaUsuario {
 
 		Emprestimo emprestimo = new Emprestimo(1L, usuario, livro, dataEmprestimo, dataDevolucao);
 		emprestimo.imprimeEmprestimo();
+
+// ----------------------------------------------   Para testar o emprestimo sem a regra de negócio implementada
+
+//		String dataEmprestimo = "";
+//		String dataDevolucao = "";
+//		boolean invalido = true;
+//
+//		while(invalido) {
+//			System.out.println("\n\n\nDigite a data do empréstimo: ");
+//			dataEmprestimo = scanner.nextLine();
+//
+//			System.out.println("Digite a data da devolução: ");
+//			dataDevolucao = scanner.nextLine();
+//
+//			LocalDate localDateEmprestimo = LocalDate.parse(dataEmprestimo, DateTimeFormatter.ISO_DATE);
+//			LocalDate localDateDevolucao = LocalDate.parse(dataDevolucao, DateTimeFormatter.ISO_DATE);
+//
+//			if(localDateDevolucao.isBefore(localDateEmprestimo)){
+//				invalido = true;
+//				System.out.println("A data da devolução deve ser depois da data do empréstimo");
+//			} else {
+//				invalido = false;
+//			}
+//		}
+//
+//		Emprestimo emprestimo = new Emprestimo(1L, usuario, livro, dataEmprestimo, dataDevolucao);
+//		emprestimo.imprimeEmprestimo();
 	}
 
 }
