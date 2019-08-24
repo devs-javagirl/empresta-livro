@@ -3,15 +3,18 @@ package com.djg.emprestalivro.dominio;
 public class Emprestimo {
 
     private Long codigo;
-
     private Usuario usuario;
-
     private Livro livro;
-
     private String dataEmprestimo;
-
     private String dataDevolucao;
 
+    public Emprestimo(Long codigo, Usuario usuario, Livro livro, String dataEmprestimo, String dataDevolucao) {
+        this.codigo = codigo;
+        this.usuario = usuario;
+        this.livro = livro;
+        this.dataEmprestimo = dataEmprestimo;
+        this.dataDevolucao = dataDevolucao;
+    }
 
     public Long getCodigo() {
         return codigo;
@@ -54,14 +57,10 @@ public class Emprestimo {
     }
 
     public void imprimeEmprestimo(){
-        String mostra = "Emprestimo{" +
-            "codigo=" + codigo +
-                    ", usuario=" + usuario +
-                    ", livro=" + livro +
-                    ", dataEmprestimo='" + dataEmprestimo + '\'' +
-                    ", dataDevolucao='" + dataDevolucao + '\'' +
-                    '}';
-
-        System.out.println(mostra);
+        System.out.println("Código: " + this.getCodigo());
+        System.out.println("Usuário: " + this.getUsuario().getNomeCompleto());
+        System.out.println("Livro:" + this.getLivro().getNome());
+        System.out.println("Data do empréstimo:" + this.getDataEmprestimo());
+        System.out.println("Data da devolução:" + this.getDataDevolucao());
     }
 }

@@ -46,12 +46,12 @@ public class Usuario {
 		this.endereco = endereco;
 	}
 	
-	public void imprimeUsuario(Usuario usuario) {
+	public void imprimeUsuario() {
 		
-		System.out.println("código: " + usuario.getCodigo());
-		System.out.println("Nome Completo: " + usuario.getNomeCompleto());
-		System.out.println("Data de Nascimento: " + usuario.getDataNascimento());
-		System.out.println("Endereço: " + usuario.getEndereco());
+		System.out.println("Código: " + this.getCodigo());
+		System.out.println("Nome Completo: " + this.getNomeCompleto());
+		System.out.println("Data de Nascimento: " + this.getDataNascimento());
+		System.out.println("Endereço: " + this.getEndereco());
 		
 	}
 }

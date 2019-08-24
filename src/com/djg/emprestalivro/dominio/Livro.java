@@ -37,11 +37,8 @@ public class Livro {
 		}
 
 		public void imprimeLivro(){
-			String mostra = "Livro{" +
-					"codigo=" + codigo +
-					", nome='" + nome + '\'' +
-					", autor='" + autor + '\'' +
-					'}';
-			System.out.println(mostra);
+			System.out.println("Código: " + this.getCodigo());
+			System.out.println("Nome do Livro: " + this.getNome());
+			System.out.println("Autor: " + this.getAutor());
 		}
 }
